@@ -1,0 +1,14 @@
+name = "jornada-cristao-vigilante"
+type = "javascript"
+main = "_worker.js"
+compatibility_date = "2026-05-23"
+
+[build]
+command = "npm install"
+watch_paths = []
+
+[build.upload]
+format = "service-worker"
+
+[site]
+bucket = "."
