@@ -639,10 +639,14 @@ ORIGINAL CONGELADA: index-ORIGINAL-CONGELADA.html
             font-size: 12.5px;
             color: var(--text-muted);
         }
-        .dep-videos { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
-        .dep-video-wrap { border-radius:12px; overflow:hidden; box-shadow:var(--shadow-md); aspect-ratio:16/9; }
-        .dep-video-wrap iframe { width:100%; height:100%; border:0; }
-        @media (max-width: 768px) { .dep-videos { grid-template-columns:1fr; } }
+        .dep-videos-row { display:flex; justify-content:center; gap:28px; margin-bottom:28px; }
+        .dep-videos-center { justify-content:center; }
+        .dep-video-card { text-align:center; }
+        .dep-video-vertical { width:280px; }
+        .dep-video-horizontal { width:100%; max-width:560px; }
+        .dep-video-wrap { border-radius:12px; overflow:hidden; box-shadow:var(--shadow-md); }
+        .dep-video-name { font-family:var(--font-body); font-size:15px; font-weight:600; color:var(--primary); margin-top:12px; line-height:1.3; }
+        @media (max-width: 768px) { .dep-videos-row { flex-direction:column; align-items:center; } .dep-video-vertical { width:260px; } }
 
         /* ===== LEAD MAGNET — REBAIXADO ===== */
         .lead-magnet {
@@ -1041,10 +1045,6 @@ ORIGINAL CONGELADA: index-ORIGINAL-CONGELADA.html
             <div class="id-item">Deseja vigiar com sobriedade bíblica, sem cair em pânico nem em indiferença espiritual</div>
             <div class="id-item">Busca um caminho de estudo sério, pastoral e organizado — mas não encontra material confiável</div>
         </div>
-        <div class="micro-proof">
-            "Antes eu vivia ansioso com cada notícia. Agora consigo filtrar tudo pelas Escrituras e orientar minha família com mais firmeza."
-            <div class="micro-proof-author">— Regina Maria Soares</div>
-        </div>
     </div>
 </section>
 
@@ -1220,27 +1220,28 @@ ORIGINAL CONGELADA: index-ORIGINAL-CONGELADA.html
             <h2>Veja o Que Está Mudando na Vida de Quem Começou</h2>
         </div>
 
-        <div class="dep-videos">
-            <div class="dep-video-wrap">
-                <iframe src="https://drive.google.com/file/d/10Dq2iXs_C4dGl-pl-8Ku2n8dSQtQQ1b_/preview" allow="autoplay" allowfullscreen></iframe>
+        <!-- Linha 1: Pastores (vídeos verticais) -->
+        <div class="dep-videos-row">
+            <div class="dep-video-card dep-video-vertical">
+                <div class="dep-video-wrap" style="position:relative;padding-bottom:125%;height:0;overflow:hidden;">
+                    <iframe src="https://drive.google.com/file/d/10Dq2iXs_C4dGl-pl-8Ku2n8dSQtQQ1b_/preview" allow="autoplay" allowfullscreen style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;"></iframe>
+                </div>
+                <p class="dep-video-name">Pastor Valdecir da Batista</p>
             </div>
-            <div class="dep-video-wrap">
-                <iframe src="https://drive.google.com/file/d/1fS9W6nUgzjMbP_jdBGevn69crm5Iu6nb/preview" allow="autoplay" allowfullscreen></iframe>
+            <div class="dep-video-card dep-video-vertical">
+                <div class="dep-video-wrap" style="position:relative;padding-bottom:125%;height:0;overflow:hidden;">
+                    <iframe src="https://drive.google.com/file/d/1ASj0lroiGjwkUx3E7T1YNzsvs1QzmcKy/preview" allow="autoplay" allowfullscreen style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;"></iframe>
+                </div>
+                <p class="dep-video-name">Pr. Edésio — Igreja Presbiteriana do Brasil</p>
             </div>
         </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <p class="testimonial-text">"Eu vivia angustiada com cada notícia. Depois desse material, aprendi a filtrar tudo pelas Escrituras. Minha paz voltou, e minha fé ficou mais firme."</p>
-                <p class="testimonial-author">— Regina Maria Soares</p>
-            </div>
-            <div class="testimonial">
-                <p class="testimonial-text">"Os recursos trabalham juntos de forma prática. Minha vida devocional ficou mais firme, madura e organizada."</p>
-                <p class="testimonial-author">— Delzimara Miranda</p>
-            </div>
-            <div class="testimonial">
-                <p class="testimonial-text">"Hoje consigo orientar minha família com mais clareza bíblica. Finalmente tenho ferramentas concretas para a vigilância espiritual."</p>
-                <p class="testimonial-author">— Laercio Candido</p>
+        <!-- Linha 2: Missionária Ana (vídeo horizontal, centralizado) -->
+        <div class="dep-videos-row dep-videos-center">
+            <div class="dep-video-card dep-video-horizontal">
+                <div class="dep-video-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                    <iframe src="https://drive.google.com/file/d/1fS9W6nUgzjMbP_jdBGevn69crm5Iu6nb/preview" allow="autoplay" allowfullscreen style="width:100%;height:100%;position:absolute;top:0;left:0;border:0;"></iframe>
+                </div>
+                <p class="dep-video-name">Missionária Ana</p>
             </div>
         </div>
     </div>
